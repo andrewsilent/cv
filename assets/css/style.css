@@ -185,10 +185,6 @@ body {
     box-sizing: content-box;
 }
 
-.section-skills {
-    padding: 3rem 0;
-}
-
 .section-skills .cards {
     display: flex;
     justify-content: space-around;
@@ -310,7 +306,7 @@ body {
     margin-top: -1.25rem;
 }
 
-.section-advantages,
+.section-experience,
 .section-expectations {
     background-color: #348;
     color: #FFF;
@@ -350,14 +346,13 @@ body {
     left: -1rem;
 }
 
-.section-experience .item::before {
+.section-advantages .item::before {
     background-color: #348;
 }
 
-.section-experience {
-    padding: 3rem 0;
-}
-
+.section-skills,
+.section-experience,
+.section-advantages,
 .section-projects {
     padding: 3rem 0;
 }
