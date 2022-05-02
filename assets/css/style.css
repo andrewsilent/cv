@@ -32,6 +32,7 @@ body {
 .title {
     font: 700 3rem/1.25 'Play';
     color: #358;
+    margin-top: 0.8rem;
 }
 
 .second-title {
@@ -68,10 +69,8 @@ body {
 
 .section-intro .intro {
     display: flex;
-    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-end;
     background-color: #FFF;
     box-shadow: 2px 5px 15px 0 rgba(0, 0, 0, 0.2);
     position: relative;
@@ -79,6 +78,10 @@ body {
 }
 
 .section-intro .state-wrap {
+    min-height: 486px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0 1.25rem;
     flex-grow: 1;
 }
@@ -90,7 +93,7 @@ body {
 
 .section-intro .state-list .item {
     font: 400 1.15rem/1.25 'Play';
-    margin-bottom: 0.375rem;
+    margin-bottom: 0.275rem;
     margin-left: 0.5rem;
     position: relative;
 }
@@ -111,12 +114,12 @@ body {
     vertical-align: baseline;
 }
 
-.section-intro .personal-list {
-    margin-top: 1.05rem;
+.section-intro .personal-list .list {
+    margin: 0.5rem 0;
 }
 
 .section-intro .personal-list .item {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.275rem;
 }
 
 .section-intro .param, .section-intro .value {
@@ -159,7 +162,6 @@ body {
 
 .section-intro .contacts {
     background-color: #358;
-    margin-top: 1.05rem;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
 }
@@ -196,7 +198,7 @@ body {
 }
 
 .section-skills .card {
-    min-width: 330px;
+    min-width: 340px;
     margin: 0 0.2rem 2rem 0.2rem;
 }
 
@@ -361,8 +363,13 @@ body {
 }
 
 .section-footer {
-    background-color: #358;
-    color: #FFF;
+    background-color: #FB3;
+    color: #358;
     padding: 2rem 0;
     text-align: center;
+}
+
+.section-footer .copyright {
+    font: 700 1rem/1.25 'Play';
+    color: #333;
 }
