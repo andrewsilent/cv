@@ -156,6 +156,26 @@ body {
 .section-intro .photo-wrap {
     height: 486px;
     overflow: hidden;
+    position: relative;
+}
+
+.section-intro .photo-wrap::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 600px;
+    backdrop-filter: blur(5px);
+    transform: rotate(10deg);
+    transform-origin: top right;
+    margin-left: -50%;
+}
+
+.section-intro .photo-wrap.hover::after {
+    margin-left: 150%;
+    transition: margin-left 0.75s ease 0s;
 }
 
 .section-intro .photo {
@@ -177,10 +197,6 @@ body {
 
 .section-intro .contacts .link {
     display: inline-block;
-}
-
-.section-intro .contacts .link:hover {
-    background-image: linear-gradient(90deg, rgba(51, 85, 170, 0) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(51, 85, 170, 0) 100%);
 }
 
 .section-intro .contacts .icon {
@@ -210,10 +226,15 @@ body {
     margin-top: 2.25rem;
     height: 8px;
     background-color: #CCC;
+    cursor: default;
 }
 
 .section-skills .param {
     padding-left: 0.5rem;
+}
+
+.section-skills .value {
+    padding-right: 0.5rem;
 }
 
 .section-skills .item::after {
@@ -354,4 +375,103 @@ body {
 .section-footer .copyright {
     font: 700 1rem/1.25 'Play';
     color: #333;
+}
+
+.animationRubber, .animationBounce {
+    cursor: default;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+
+@keyframes bounceIn {
+    0%, 20%, 40%, 60%, 80%, to {animation-timing-function:cubic-bezier(.215,.61,.355,1)}
+    0%{opacity:.5;transform:scale3d(.3,.3,.3)}
+    20%{transform:scale3d(1.1,1.1,1.1)}
+    40%{transform:scale3d(.9,.9,.9)}
+    60%{opacity:1;transform:scale3d(1.03,1.03,1.03)}
+    80%{transform:scale3d(.97,.97,.97)}
+    to{opacity:1;transform:scaleX(1)}
+}
+
+.rubberBand {
+    animation-name: rubberBand;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+
+@keyframes rubberBand {
+    from, to {transform: scale3d(1, 1, 1)}
+    30% {transform: scale3d(1.25, 0.75, 1)}
+    40% {transform: scale3d(0.75, 1.25, 1)}
+    50% {transform: scale3d(1.15, 0.85, 1)}
+    65% {transform: scale3d(0.95, 1.05, 1)}
+    75% {transform: scale3d(1.05, 0.95, 1)}
+}
+
+.progress90::after {
+    animation: expand90 1.9s ease forwards;
+}
+
+.progress80::after {
+    animation: expand80 1.8s ease forwards;
+}
+
+.progress75::after {
+    animation: expand75 1.75s ease forwards;
+}
+
+.progress70::after {
+    animation: expand70 1.7s ease forwards;
+}
+
+.progress60::after {
+    animation: expand60 1.6s ease forwards;
+}
+
+.progress50::after {
+    animation: expand50 1.5s ease forwards;
+}
+
+@keyframes expand90 {
+    from {width: 0%;background: #FB3;}
+    70% {background: #FB3;}
+    to {width: 90%;background: #358;}
+}
+
+@keyframes expand80 {
+    from {width: 0%;}
+    60% {background: #FB3;}
+    to {width: 80%;}
+}
+
+@keyframes expand75 {
+    from {width: 0%;}
+    55% {background: #FB3;}
+    to {width: 75%;}
+}
+
+@keyframes expand70 {
+    from {width: 0%;}
+    50% {background: #FB3;}
+    to {width: 70%;}
+}
+
+@keyframes expand60 {
+    from {width: 0%;}
+    40% {background: #FB3;}
+    to {width: 60%;}
+}
+
+@keyframes expand50 {
+    from {width: 0%;}
+    30% {background: #FB3;}
+    to {width: 50%;}
 }
