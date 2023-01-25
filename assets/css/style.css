@@ -29,6 +29,38 @@ body {
     margin: 0 auto;
 }
 
+.parallax-sunflowers {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 100px;
+    height: 100vh;
+}
+
+.parallax-sunflowers::before,
+.parallax-sunflowers::after {
+    content: '';
+    background-image: url("/assets/img/sunflowers.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+    height: 500px;
+    width: 500px;
+}
+
+.parallax-sunflowers::before {
+    right: 100%;
+    top: 115%;
+    transform: translateZ(-45px) scale(2.25) rotate(45deg);
+}
+
+.parallax-sunflowers::after {
+    left: 100%;
+    top: 105%;
+    transform: translateZ(-50px) scale(2.5) rotate(-100deg);
+}
+
 .title {
     font: 700 3rem/1.25 'Play';
     color: #358;
@@ -205,10 +237,6 @@ body {
     box-sizing: content-box;
 }
 
-.section-intro {
-    background-color: #FB3;
-}
-
 .section-skills .cards {
     display: flex;
     justify-content: space-around;
@@ -326,6 +354,11 @@ body {
 .section-experience .container,
 .section-expectations .container {
     padding: 0 1.25rem;
+}
+
+.section-skills .container,
+.section-advantages .container {
+    backdrop-filter: blur(10px);
 }
 
 .section-advantages .list,
