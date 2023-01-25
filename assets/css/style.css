@@ -40,7 +40,7 @@ body {
 .parallax-sunflowers::before,
 .parallax-sunflowers::after {
     content: '';
-    background-image: url("/assets/img/sunflowers.png");
+    background-image: url("../img/sunflowers.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
