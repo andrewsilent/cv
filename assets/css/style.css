@@ -310,27 +310,36 @@ body {
     margin-top: -1.25rem;
 }
 
-.section-advantages {
+.section-advantages,
+.section-expectations {
     background-color: #348;
     color: #FFF;
     padding: 3rem 0;
 }
 
-.section-advantages .container {
+.section-advantages .container,
+.section-experience .container,
+.section-expectations .container{
     padding: 0 1.25rem;
 }
 
-.section-advantages .list {
+.section-advantages .list,
+.section-experience .list,
+.section-expectations .list {
     margin-left: 0.5rem;
 }
 
-.section-advantages .item {
+.section-advantages .item,
+.section-experience .item,
+.section-expectations .item {
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
     position: relative;
 }
 
-.section-advantages .item::before {
+.section-advantages .item::before,
+.section-experience .item::before,
+.section-expectations .item::before {
     display: inline-block;
     content: '';
     height: 8px;
@@ -339,6 +348,14 @@ body {
     position: absolute;
     top: 0.4rem;
     left: -1rem;
+}
+
+.section-experience .item::before {
+    background-color: #348;
+}
+
+.section-experience {
+    padding: 3rem 0;
 }
 
 .section-projects {
