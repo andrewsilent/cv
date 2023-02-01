@@ -35,7 +35,7 @@ body {
 }
 
 .second-title {
-    font: 400 2rem/1.25 'Play';
+    font: 400 1.5rem/1.25 'Play';
     border-bottom: 1px solid #DDD;
     padding-bottom: 0.75rem;
     margin-bottom: 1rem;
@@ -83,10 +83,16 @@ body {
     flex-grow: 1;
 }
 
+.section-intro .state-list .list {
+    max-width: 680px;
+    margin-left: 0.5rem;
+}
+
 .section-intro .state-list .item {
     font: 400 1.15rem/1.25 'Play';
     margin-bottom: 0.375rem;
     margin-left: 0.5rem;
+    position: relative;
 }
 
 .section-intro .state-list .item::before {
@@ -95,9 +101,9 @@ body {
     height: 8px;
     width: 8px;
     background-color: #35A;
-    position: relative;
-    top: -0.0625rem;
-    left: -0.5rem;
+    position: absolute;
+    top: 0.5rem;
+    left: -1rem;
 }
 
 .section-intro .state-list .item .small {
@@ -106,7 +112,7 @@ body {
 }
 
 .section-intro .personal-list {
-    margin-top: 1.25rem;
+    margin-top: 1.05rem;
 }
 
 .section-intro .personal-list .item {
@@ -143,7 +149,7 @@ body {
 }
 
 .section-intro .photo-wrap {
-    height: 480px;
+    height: 486px;
     overflow: hidden;
 }
 
@@ -153,7 +159,7 @@ body {
 
 .section-intro .contacts {
     background-color: #348;
-    margin-top: 1.5rem;
+    margin-top: 1.05rem;
     margin-left: -1.25rem;
     margin-right: -1.25rem;
 }
@@ -245,54 +251,54 @@ body {
 }
 
 .section-skills .js.item::after {
-    width: 25%;
+    width: 80%;
+}
+
+.section-skills .ts.item::after {
+    width: 70%;
+}
+
+.section-skills .sql.item::after {
+    width: 50%;
 }
 
 .section-skills .react.item::after {
-    width: 10%;
+    width: 80%;
 }
 
-.section-skills .php.item::after {
-    width: 10%;
+.section-skills .node.item::after {
+    width: 60%;
 }
 
-.section-skills .ng.item::after {
-    width: 75%;
-}
-
-.section-skills .sl.item::after {
-    width: 75%;
-}
-
-.section-skills .jq.item::after {
-    width: 25%;
-}
-
-.section-skills .bs.item::after {
-    width: 25%;
-}
-
-.section-skills .dl.item::after {
-    width: 25%;
-}
-
-.section-skills .vsc.item::after {
-    width: 75%;
-}
-
-.section-skills .phs.item::after {
-    width: 75%;
-}
-
-.section-skills .lnx.item::after {
+.section-skills .native.item::after {
     width: 50%;
 }
 
-.section-skills .git.item::after {
+.section-skills .state.item::after {
     width: 50%;
 }
 
-.section-skills .gle.item::after {
+.section-skills .graphql.item::after {
+    width: 50%;
+}
+
+.section-skills .db.item::after {
+    width: 75%;
+}
+
+.section-skills .tests.item::after {
+    width: 75%;
+}
+
+.section-skills .http.item::after {
+    width: 75%;
+}
+
+.section-skills .bundlers.item::after {
+    width: 75%;
+}
+
+.section-skills .docker.item::after {
     width: 50%;
 }
 
@@ -314,9 +320,14 @@ body {
     padding: 0 1.25rem;
 }
 
+.section-advantages .list {
+    margin-left: 0.5rem;
+}
+
 .section-advantages .item {
     margin-bottom: 0.5rem;
     margin-left: 0.5rem;
+    position: relative;
 }
 
 .section-advantages .item::before {
@@ -325,9 +336,9 @@ body {
     height: 8px;
     width: 8px;
     background-color: #FFF;
-    position: relative;
-    top: -0.0625rem;
-    left: -0.25rem;
+    position: absolute;
+    top: 0.4rem;
+    left: -1rem;
 }
 
 .section-projects {
