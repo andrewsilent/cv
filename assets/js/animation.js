@@ -74,31 +74,10 @@ function init() {
     }
   }
 
-  function hoverEffectOnMouse(options) {
-    const defaultOptions = { selectors: [".section-intro .photo-wrap"]}
-    const o = {...defaultOptions, ...options}
-
-    o.selectors.forEach(selector => {
-      document.querySelectorAll(selector).forEach(element => {
-        element.addEventListener('mouseenter', toggleClass.bind(element));
-        element.addEventListener('mouseleave', toggleClass.bind(element));
-      });
-    })
-  }
-
-  function toggleClass() {
-    this.classList.toggle('hover');
-  }
-
   splitString({delimiter: "letter", addClassName: "animationRubber", selectors: [".title, .second-title, .section-title"]})
-  splitString({delimiter: "letter", addClassName: "animationBounce", selectors: [".subtitle"]})
-  splitString({delimiter: "word", addClassName: "animationRubber", selectors: [".personal-list .param"]})
-  splitString({delimiter: "word", addClassName: "animationRubber", selectors: [".section-experience .item, .section-advantages .item, .section-expectations .item"]})
 
   animationOnMouseOver({animation: "rubberBand", selectors: [".animationRubber, .contacts .link"]})
-  animationOnMouseOver({animation: "bounceIn", selectors: [".animationBounce"]})
   switchClassOnMouseOver({selectors: [".section-skills .list .item"]})
-  hoverEffectOnMouse({selectors: [".section-intro .photo-wrap"]})
 }
 
 document.onload = init();
