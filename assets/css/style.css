@@ -255,6 +255,7 @@ body {
     height: 8px;
     background-color: #CCC;
     cursor: default;
+    text-shadow: 0 0 3px #EEE;
 }
 
 .section-skills .param {
@@ -507,4 +508,29 @@ body {
     from {width: 0%;}
     30% {background: #FB3;}
     to {width: 50%;}
+}
+
+@media screen and (max-width: 1136px) {
+    .parallax-sunflowers::before,
+    .parallax-sunflowers::after {
+        display: none;
+    }
+
+    .section-intro {
+        padding-top: 0;
+    }
+
+    .photo-wrap {
+        display: none;
+    }
+
+    .section-intro .state-list .list {
+        max-width: none;
+    }
+
+    .section-skills .cards {
+        margin: 0 auto;
+        flex-direction: column;
+        max-width: 400px;
+    }
 }
