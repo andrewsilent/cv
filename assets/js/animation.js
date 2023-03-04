@@ -67,8 +67,8 @@ function init() {
   }
 
   function switchCustomClassName(element) {
-    if (element.classList.length > 2) {
-      const classname = element.classList[2]
+    if (element.classList.length > 1) {
+      const classname = element.classList[1]
       element.classList.remove(classname)
       setTimeout(() => element.classList.add(classname), 100)
     }

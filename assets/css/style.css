@@ -276,66 +276,6 @@ body {
     background-color: #358;
 }
 
-.section-skills .html.item::after {
-    width: 90%;
-}
-
-.section-skills .css.item::after {
-    width: 90%;
-}
-
-.section-skills .js.item::after {
-    width: 80%;
-}
-
-.section-skills .ts.item::after {
-    width: 70%;
-}
-
-.section-skills .sql.item::after {
-    width: 50%;
-}
-
-.section-skills .react.item::after {
-    width: 80%;
-}
-
-.section-skills .node.item::after {
-    width: 60%;
-}
-
-.section-skills .native.item::after {
-    width: 50%;
-}
-
-.section-skills .state.item::after {
-    width: 50%;
-}
-
-.section-skills .graphql.item::after {
-    width: 50%;
-}
-
-.section-skills .db.item::after {
-    width: 75%;
-}
-
-.section-skills .tests.item::after {
-    width: 75%;
-}
-
-.section-skills .http.item::after {
-    width: 75%;
-}
-
-.section-skills .bundlers.item::after {
-    width: 75%;
-}
-
-.section-skills .docker.item::after {
-    width: 50%;
-}
-
 .section-skills .param {
     flex-grow: 1;
 }
@@ -450,16 +390,16 @@ body {
     75% {transform: scale3d(1.05, 0.95, 1)}
 }
 
+.progress100::after {
+    animation: expand100 2s ease forwards;
+}
+
 .progress90::after {
     animation: expand90 1.9s ease forwards;
 }
 
 .progress80::after {
     animation: expand80 1.8s ease forwards;
-}
-
-.progress75::after {
-    animation: expand75 1.75s ease forwards;
 }
 
 .progress70::after {
@@ -474,39 +414,39 @@ body {
     animation: expand50 1.5s ease forwards;
 }
 
+@keyframes expand100 {
+    from {width: 0%; background: #FB3;}
+    50% {background: #FB3;}
+    to {width: 100%; background: #358;}
+}
+
 @keyframes expand90 {
-    from {width: 0%;background: #FB3;}
-    70% {background: #FB3;}
-    to {width: 90%;background: #358;}
+    from {width: 0%; background: #FB3;}
+    50% {background: #FB3;}
+    to {width: 90%; background: #358;}
 }
 
 @keyframes expand80 {
-    from {width: 0%;}
-    60% {background: #FB3;}
+    from {width: 0%; background: #FB3;}
+    50% {background: #FB3;}
     to {width: 80%;}
 }
 
-@keyframes expand75 {
-    from {width: 0%;}
-    55% {background: #FB3;}
-    to {width: 75%;}
-}
-
 @keyframes expand70 {
-    from {width: 0%;}
+    from {width: 0%; background: #FB3;}
     50% {background: #FB3;}
     to {width: 70%;}
 }
 
 @keyframes expand60 {
-    from {width: 0%;}
-    40% {background: #FB3;}
+    from {width: 0%; background: #FB3;}
+    50% {background: #FB3;}
     to {width: 60%;}
 }
 
 @keyframes expand50 {
-    from {width: 0%;}
-    30% {background: #FB3;}
+    from {width: 0%; background: #FB3;}
+    50% {background: #FB3;}
     to {width: 50%;}
 }
 
